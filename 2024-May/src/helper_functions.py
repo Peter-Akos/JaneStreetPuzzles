@@ -89,6 +89,9 @@ def multiple_of_5(num):
 
 
 def cube(num):
-    # Checks if the input is a cube number
-    return num == int(num ** (1 / 3)) ** 3
+    if num < 0:
+        return -cube(-num)
+        # Approximate cube root
+    cube_root = round(num ** (1 / 3))
+    return num == cube_root ** 3
 
